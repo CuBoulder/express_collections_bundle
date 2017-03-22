@@ -2,6 +2,10 @@ name = Collections
 description = A content type and block display for collections of content
 core = 7.x
 package = Collections
+version = 1.0
+project = express_collections_bundle
+project status url = https://github.com/CuBoulder/express_collections_bundle
+
 dependencies[] = bean_admin_ui
 dependencies[] = ctools
 dependencies[] = express_field_bases
