@@ -35,7 +35,7 @@ function express_collections_bundle_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'cache_flush_cache_entity_field_collection_item';
-  $strongarm->value = 1486655994;
+  $strongarm->value = 1487201780;
   $export['cache_flush_cache_entity_field_collection_item'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -87,7 +87,7 @@ function express_collections_bundle_strongarm() {
         'custom_settings' => FALSE,
       ),
       'embed' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'feature' => array(
         'custom_settings' => FALSE,
@@ -96,13 +96,13 @@ function express_collections_bundle_strongarm() {
         'custom_settings' => FALSE,
       ),
       'sidebar' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'table' => array(
         'custom_settings' => FALSE,
       ),
       'title' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'grid' => array(
         'custom_settings' => TRUE,
@@ -114,6 +114,9 @@ function express_collections_bundle_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'teaser_large' => array(
         'custom_settings' => FALSE,
       ),
     ),
