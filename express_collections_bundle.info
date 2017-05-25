@@ -4,6 +4,7 @@ core = 7.x
 package = Collections
 version = 1.0
 project = express_collections_bundle
+bundle_group = addon_bundles
 dependencies[] = bean_admin_ui
 dependencies[] = ctools
 dependencies[] = express_field_bases
