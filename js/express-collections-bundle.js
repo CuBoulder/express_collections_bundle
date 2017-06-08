@@ -9,8 +9,7 @@
     });
     $(".collection-items-categories").hide();
 
-    $("ul.collection-items-navigation a").first().addClass('active');
-    $("ul.collection-items-navigation a, .collection-filter-links button").click(function(){
+    $(".collection-filter-links button").click(function(){
       // Get the collection to operate on
       var collectionTarget = $(this).attr("data-collection");
       // Remove disabled class, aria from all items in collection
@@ -27,8 +26,9 @@
       updateCollectionResults(collectionTarget);
       return false;
     });
+
     // Collection ALL link
-    $("ul.collection-items-navigation a.collection-category-all, button.collection-filter-clear").click(function(){
+    $("button.collection-filter-clear").click(function(){
       // Get the collection to operate on
       var collectionTarget = $(this).attr("data-collection");
       // Remove disabled class, aria from all items in collection
@@ -39,20 +39,6 @@
       $(this).addClass('active');
       updateCollectionResults(collectionTarget);
       return false;
-    });
-
-
-    $("select.collection-filter").change(function(){
-      // Get the collection to operate on
-      var collectionTarget = $(this).attr("data-collection");
-      // Get the collection category
-      var target = $(this).val();
-      // Show all collection items
-      $("#" + collectionTarget + " .collection-item").removeClass('collection-item-disabled').removeAttr('aria-hidden').removeAttr('role');
-      // Add disabled class, aria to collection items that are not part of the category chosen
-      if (target != 'all') {
-        $('#' + collectionTarget + ' .collection-item').not('.collection-category-' + target).addClass('collection-item-disabled').attr('aria-hidden', 'true').attr('role', 'presentation');
-      }
     });
 
     $('.collection-filter-links-multiple h3.collection-filter-label').click(function(event){
@@ -68,6 +54,8 @@
       $('.collection-grid .results').text(items + ' items found.');
       $('.collection-filter-clear').addClass('active');
     });
+
+    // UPdate the items found in a collection grid.
     function updateCollectionResults(collectionId) {
       $('#' + collectionId + ' .collection-item').removeAttr('tabindex');
       var items = $('#' + collectionId + ' .collection-item-active').length;
