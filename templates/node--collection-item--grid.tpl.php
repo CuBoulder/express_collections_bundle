@@ -1,4 +1,4 @@
-<div class="collection-item collection-item-visible collection-view-mode-grid <?php print $category_classes; ?>">
+<div class="animated collection-item collection-item-visible collection-view-mode-grid <?php print $category_classes; ?>">
   <?php
     if (!empty($content['field_collection_thumbnail'])) {
       print render($content['field_collection_thumbnail']);

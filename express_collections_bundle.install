@@ -31,3 +31,23 @@ function express_collections_bundle_install() {
     variable_set($var, $type);
   }
 }
+
+/**
+ * Migrate Collection Grid category field into field collection category field.
+ */
+function express_collections_bundle_update_7001() {
+  $query = db_select('bean', 'bean');
+  $query->fields('bean', array('bid', 'type'));
+  $query->condition('bean.type', 'collection_grid', '=');
+  $results = $query->execute()->fetchCol();
+
+  foreach ($results as $bid) {
+    $bean = bean_load($bid);
+    $category = $bean->field_collection_grid_category;
+    $fc_item = entity_create('field_collection_item', array('field_name' => 'field_collection_grid_categories'));
+    $fc_item->setHostEntity('bean', $bean);
+    $fc_item->field_collection_grid_category = $category;
+    $fc_item->save();
+    $bean->save();
+  }
+}
