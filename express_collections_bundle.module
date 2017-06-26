@@ -83,16 +83,22 @@ function express_collections_bundle_preprocess_entity(&$vars) {
         $tids[] = $term['tid'];
       }
       $terms = taxonomy_term_load_multiple($tids);
+
+      // Filter background image
+      $image = !empty($fc->field_collection_category_bg) ? image_style_url('large', $fc->field_collection_category_bg[LANGUAGE_NONE][0]['uri']) : NULL;
       if (count($items) > 1) {
-        $vars['content']['filters'][$key]['#markup'] = theme('collection_filter_links', array('label' => $label, 'collection_filter_terms' => $terms, 'collection_id' => $vars['bean']->bid));
+        $vars['content']['filters'][$key]['#markup'] = theme('collection_filter_links', array('label' => $label, 'collection_filter_terms' => $terms, 'collection_id' => $vars['bean']->bid, 'image' => $image));
+      }
+      elseif (count($items) == 1 && $image) {
+        $vars['content']['filters'][$key]['#markup'] = theme('collection_filter_links', array('label' => $label, 'collection_filter_terms' => $terms, 'collection_id' => $vars['bean']->bid, 'image' => $image));
       }
       else {
-        $vars['content']['filters'][$key]['#markup'] = theme('collection_filter_links_single', array('label' => $label, 'collection_filter_terms' => $terms, 'collection_id' => $vars['bean']->bid));
+        $vars['content']['filters'][$key]['#markup'] = theme('collection_filter_links_single', array('label' => $label, 'collection_filter_terms' => $terms, 'collection_id' => $vars['bean']->bid, 'image' => $image));
       }
     }
 
     // Add all items to output
-    $vars['content']['items']['all'] = _express_collections_bundle_category_query($types, array_keys($categories), $summary);
+    $vars['content']['items']['all'] = _express_collections_bundle_category_query($types, array_keys($tids), $summary);
     $vars['content']['items']['all']['#prefix'] = '<div class="collection-items" id="' . $anchor .'all"><h3 class="element-invisible">All</h3><div class="clear clearfix row">';
     $vars['content']['items']['all']['#suffix'] = '</div></div>';
 

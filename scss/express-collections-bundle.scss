@@ -113,7 +113,7 @@ select.collection-filter {
   margin-bottom: 20px;
 }
 
-.collection-filter-links {
+.collection-filter-links-single .collection-filter-links {
 
   button {
     background:#fff;
@@ -132,24 +132,103 @@ select.collection-filter {
     }
   }
 }
-.collection-filter-links-multiple {
 
+.collection-filter-links-multiple {
+  background-color:#333;
 
   .collection-filter-links {
     display: none;
-    padding:20px;
+    padding:10px 20px;
     border:1px solid #e7e7e7;
     border-top:none;
+
+    .collection-links-buttons {
+      margin: 0 -20px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width:600px) {
+      .collection-links-buttons {
+        flex-direction: row;
+      }
+    }
+    button {
+      font-size: 100%;
+      padding:8px 16px;
+      margin: 0px 20px 20px;
+      width: calc( 100% - 40px);
+      background:rgba(0,0,0,.5);
+      display: inline-block;
+      border:1px solid #d7d7d7;
+      color: #fff;
+      font-weight: 600;
+      // text-transform: uppercase;
+      &.active,
+      &:hover {
+        background-color: #fff;
+        color:#000;
+      }
+    }
+    @media screen and (min-width:600px) {
+      button {
+        margin: 0px 20px 40px;
+        width: calc( 50% - 40px);
+      }
+    }
+    @media screen and (min-width:768px) {
+      button {
+        width: calc( 33% - 40px);
+      }
+    }
+    @media screen and (min-width:960px) {
+      button {
+        width: calc( 25% - 40px);
+      }
+    }
   }
   h3.collection-filter-label {
-    background:#333;
-    color:#fff;
-    
-    padding:10px;
-    text-align: center;
+
+    a {
+      color:#fff;
+      padding:10px;
+      text-align: center;
+      display: block;
+      font-size: 115%;
+      & span:before {
+        content: '\f067';
+        font-family: FontAwesome;
+        margin-right:10px;
+      }
+      &[aria-expanded='true'] span:before {
+        content: '\f078';
+      }
+    }
     margin:0;
-    &:hover {
-      cursor: pointer;
+  }
+  &.collection-filter-links-bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .collection-filter-links-inner {
+      background:rgba(0,0,0,.5);
+      &:not(.expanded):hover {
+        background: rgba(0,0,0,.75);
+      }
+    }
+    h3.collection-filter-label {
+
+      a {
+        padding:40px;
+        font-size: 120%;
+      }
+      @media screen and (min-width:768px) {
+        a {
+          padding:80px;
+          font-size: 160%;
+        }
+      }
     }
   }
 }

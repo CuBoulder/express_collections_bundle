@@ -52,8 +52,8 @@ function express_collections_bundle_field_group_info() {
     'weight' => '12',
     'children' => array(
       0 => 'field_collection_display_summary',
-      1 => 'field_collection_filter_type',
-      2 => 'field_collection_filter_effect',
+      1 => 'field_collection_filter_effect',
+      2 => 'field_collection_filter_type',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -82,6 +82,7 @@ function express_collections_bundle_field_group_info() {
     'children' => array(
       0 => 'field_collection_grid_category',
       1 => 'field_collection_grid_type',
+      2 => 'field_collection_grid_categories',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

@@ -125,6 +125,38 @@ function express_collections_bundle_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'bean-collection_grid-field_collection_grid_categories'.
+  $field_instances['bean-collection_grid-field_collection_grid_categories'] = array(
+    'bundle' => 'collection_grid',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'bean',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_collection_grid_categories',
+    'label' => 'Categories',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance:
   // 'bean-collection_grid-field_collection_grid_category'.
   $field_instances['bean-collection_grid-field_collection_grid_category'] = array(
     'bundle' => 'collection_grid',
@@ -184,6 +216,195 @@ function express_collections_bundle_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_collection_grid_categories-field_collection_category_bg'.
+  $field_instances['field_collection_item-field_collection_grid_categories-field_collection_category_bg'] = array(
+    'bundle' => 'field_collection_grid_categories',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_collection_category_bg',
+    'label' => 'Background Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '2000x2000',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'insert' => 0,
+        'insert_absolute' => FALSE,
+        'insert_class' => '',
+        'insert_default' => 'auto',
+        'insert_styles' => array(
+          'auto' => 'auto',
+          'colorbox__backstretch' => 0,
+          'colorbox__el_hero' => 0,
+          'colorbox__email_ad' => 0,
+          'colorbox__email_ad_large' => 0,
+          'colorbox__email_feature_thumbnail' => 0,
+          'colorbox__email_feature_thumbnail_large' => 0,
+          'colorbox__email_large' => 0,
+          'colorbox__email_medium' => 0,
+          'colorbox__email_teaser_thumbnail' => 0,
+          'colorbox__flexslider_full' => 0,
+          'colorbox__flexslider_thumbnail' => 0,
+          'colorbox__focal_point_preview' => 0,
+          'colorbox__hero' => 0,
+          'colorbox__large' => 0,
+          'colorbox__large_rectangle_thumbnail' => 0,
+          'colorbox__large_square_thumbnail' => 0,
+          'colorbox__large_wide_thumbnail' => 0,
+          'colorbox__linkit_thumb' => 0,
+          'colorbox__medium' => 0,
+          'colorbox__preview' => 0,
+          'colorbox__slider' => 0,
+          'colorbox__slider-large' => 0,
+          'colorbox__small' => 0,
+          'colorbox__small_square_thumbnail' => 0,
+          'colorbox__small_thumbnail' => 0,
+          'colorbox__square' => 0,
+          'colorbox__square_thumbnail' => 0,
+          'colorbox__thumbnail' => 0,
+          'colorbox__widescreen' => 0,
+          'icon_link' => 0,
+          'image' => 0,
+          'image_backstretch' => 0,
+          'image_el_hero' => 0,
+          'image_email_ad' => 0,
+          'image_email_ad_large' => 0,
+          'image_email_feature_thumbnail' => 0,
+          'image_email_feature_thumbnail_large' => 0,
+          'image_email_large' => 0,
+          'image_email_medium' => 0,
+          'image_email_teaser_thumbnail' => 0,
+          'image_flexslider_full' => 0,
+          'image_flexslider_thumbnail' => 0,
+          'image_focal_point_preview' => 0,
+          'image_hero' => 0,
+          'image_large' => 0,
+          'image_large_rectangle_thumbnail' => 0,
+          'image_large_square_thumbnail' => 0,
+          'image_large_wide_thumbnail' => 0,
+          'image_linkit_thumb' => 0,
+          'image_medium' => 0,
+          'image_preview' => 0,
+          'image_slider' => 0,
+          'image_slider-large' => 0,
+          'image_small' => 0,
+          'image_small_square_thumbnail' => 0,
+          'image_small_thumbnail' => 0,
+          'image_square' => 0,
+          'image_square_thumbnail' => 0,
+          'image_thumbnail' => 0,
+          'image_widescreen' => 0,
+          'link' => 0,
+        ),
+        'insert_width' => '',
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_collection_grid_categories-field_collection_grid_category'.
+  $field_instances['field_collection_item-field_collection_grid_categories-field_collection_grid_category'] = array(
+    'bundle' => 'field_collection_grid_categories',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_collection_grid_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_collection_grid_categories-field_collection_grid_label'.
+  $field_instances['field_collection_item-field_collection_grid_categories-field_collection_grid_label'] = array(
+    'bundle' => 'field_collection_grid_categories',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_collection_grid_label',
+    'label' => 'Label',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
     ),
   );
 
@@ -791,12 +1012,15 @@ function express_collections_bundle_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('A short, preview of the collection item content. A summarized version of the body field will be used if this field is empty.');
+  t('Background Image');
   t('Body');
+  t('Categories');
   t('Categories of collection type, such as major, minor, certificate, etc. A collection item can have multiple categories.');
   t('Category');
   t('Display Summary');
   t('Filter Effect');
   t('Filter Type');
+  t('Label');
   t('Links appear in a row above the grid as clickable buttons. Select list appears as a dropdown above the grid.');
   t('Photo');
   t('Preview');
