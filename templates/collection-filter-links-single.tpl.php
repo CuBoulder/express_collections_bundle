@@ -1,6 +1,6 @@
 <div class="collection-filter-links-wrapper collection-filter-links-single">
   <?php if ($label): ?>
-    <h3 class="collection-filter-label"><span>Filter by <?php print $label; ?></span></h3>
+    <h3 class="collection-filter-label"><span><?php print $label; ?></span></h3>
   <?php else: ?>
     <h3 class="collection-filter-label element-invisible">Filter</h3>
   <?php endif; ?>

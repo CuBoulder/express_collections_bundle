@@ -43,6 +43,7 @@
 
     $('.collection-filter-links-multiple h3.collection-filter-label a').click(function(event){
       event.preventDefault();
+      var link = $(this);
       if ($(this).attr('aria-expanded') == 'true') {
         $('.collection-filter-links').slideUp().parent().removeClass('expanded');
         $('h3.collection-filter-label a').attr('aria-expanded', 'false');
@@ -52,9 +53,12 @@
         $('h3.collection-filter-label a').attr('aria-expanded', 'false');
         $(this).parent().next().slideDown().parent().addClass('expanded');
         $(this).attr('aria-expanded', 'true');
-        $('html, body').animate({
-          scrollTop: $($(this)).offset().top - 100
-        }, 500);
+
+        setTimeout(function(){
+            $('html, body').animate({
+              scrollTop: $(link).offset().top - 100
+            }, 500);
+          }, 600);
       }
     });
     $('.collection-grid').each(function(){
