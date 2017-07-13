@@ -16,6 +16,7 @@
       $("#" + collectionTarget + " .collection-item").removeClass('collection-item-disabled').removeAttr('aria-hidden').removeAttr('role').removeClass('collection-item-active');
       // Get the collection category
       var target = $(this).attr("data-collection-category");
+      history.pushState(null,null,'#' + target);
       // Apply disabled class, aria to all items not in category
       $('#' + collectionTarget + ' .collection-item').not('.collection-category-' + target).addClass('collection-item-disabled').attr('aria-hidden', 'true').attr('role', 'presentation');
       $('#' + collectionTarget + ' .collection-item.collection-category-' + target).addClass('collection-item-active');
@@ -66,13 +67,24 @@
       var items = $('.collection-item-active', this).length;
       $('.collection-grid .results').text(items + ' items found.');
       $('.collection-filter-clear').addClass('active');
+
+      // Check for hash
+      if(window.location.hash) {
+        var $hash = window.location.hash;
+        if ( $("button[data-collection-category-hash='" + $hash + "']", this).length ) {
+          $("button[data-collection-category-hash='" + $hash + "']").click();
+        }
+      }
+
     });
+
+
 
     // UPdate the items found in a collection grid.
     function updateCollectionResults(collectionId) {
       $('#' + collectionId + ' .collection-item').removeAttr('tabindex');
       var items = $('#' + collectionId + ' .collection-item-active').length;
-      $('#' + collectionId + ' .results').text(items + ' items found.').attr('tabindex','-1').focus();;
+      $('#' + collectionId + ' .results').text(items + ' items found.').attr('tabindex','-1').focus();
       $('.element-item').removeAttr('tabindex');
       $('#' + collectionId + ' .collection-item-active').attr('tabindex',0);
 
