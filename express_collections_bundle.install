@@ -36,9 +36,9 @@ function express_collections_bundle_install() {
  * Migrate Collection Grid category field into field collection category field.
  */
 function express_collections_bundle_update_7001() {
-  $query = db_select('bean', 'bean');
-  $query->fields('bean', array('bid', 'type'));
-  $query->condition('bean.type', 'collection_grid', '=');
+  $query = db_select('bean', 'b');
+  $query->fields('b', array('bid', 'type'));
+  $query->condition('b.type', 'collection_grid', '=');
   $results = $query->execute()->fetchCol();
 
   foreach ($results as $bid) {
