@@ -51,7 +51,7 @@ select.collection-filter { margin-bottom: 10px; }
 @media screen and (min-width: 768px) { .collection-filter-links-multiple .collection-filter-links button { width: calc(33% - 40px); } }
 @media screen and (min-width: 960px) { .collection-filter-links-multiple .collection-filter-links button { width: calc(25% - 40px); } }
 .collection-filter-links-multiple h3.collection-filter-label { margin: 0; }
-.collection-filter-links-multiple h3.collection-filter-label a { color: #fff; padding: 10px; text-align: center; display: block; font-size: 115%; }
+.collection-filter-links-multiple h3.collection-filter-label a { color: #fff !important; padding: 10px; text-align: center; display: block; font-size: 115%; }
 .collection-filter-links-multiple h3.collection-filter-label a span:before { content: '\f067'; font-family: FontAwesome; margin-right: 10px; }
 .collection-filter-links-multiple h3.collection-filter-label a[aria-expanded='true'] span:before { content: '\f078'; }
 .collection-filter-links-multiple.collection-filter-links-bg { background-position: center center; background-repeat: no-repeat; background-size: cover; position: relative; }
