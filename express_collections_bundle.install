@@ -52,7 +52,7 @@ function express_collections_bundle_update_7001() {
   }
 }
 
-function express_collections_bundle_update_7002() {
-
-
+function express_collections_bundle_update_7102() {
+  field_delete_instance('field_collection_grid_category');
+  return t('Removed field_collection_grid_category from database');
 }
