@@ -278,7 +278,7 @@ function _cu_test_content_collections_block() {
   $values['field_collection_grid_type'][LANGUAGE_NONE][0]['tid'] = $collection_tid;
 
   foreach ($collection_terms as $key => $term) {
-    $values['field_collection_grid_category'][LANGUAGE_NONE][$key]['tid'] = $term;
+    $values['field_collection_grid_categories'][LANGUAGE_NONE][$key]['tid'] = $term;
   }
 
   $bean = bean_create($values);
