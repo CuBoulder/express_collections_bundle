@@ -37,7 +37,7 @@ install:
   - export TRAVIS_EVENT_TYPE
 
   # Name of bundle used as a placeholder in scripts.
-  - export BUNDLE_NAME="cu_digital_campaign_bundle"
+  - export BUNDLE_NAME="express_collections_bundle"
 
   # Extra modules that need to be enabled but aren't by default.
   # - export ADD_MODULES="cu_ab_test cu_dc_tests"
