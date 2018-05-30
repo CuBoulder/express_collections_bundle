@@ -68,7 +68,6 @@ function express_collections_bundle_preprocess_entity(&$vars) {
     $categories = array();
     $terms = array();
     $sort = 0;
-
     $vars['content']['filters'] = array();
     $items = $vars['bean']->field_collection_grid_categories[LANGUAGE_NONE];
 
