@@ -1,5 +1,5 @@
 name = Collections
-description = A content type and block display for collections of content
+description = The ability to create filtered content based on a ‘collection’ of information (i.e. resources).
 core = 7.x
 package = Collections
 version = 7.x-1.5
@@ -87,3 +87,4 @@ features[variable][] = pathauto_taxonomy_term_collection_type_pattern
 features[variable][] = save_continue_collection_item
 features[variable][] = webform_node_collection_item
 project status url = https://github.com/CuBoulder/express_collections_bundle
+project_demo_url = http://www.colorado.edu/webcentral/node/1530
