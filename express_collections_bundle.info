@@ -85,6 +85,12 @@ features[variable][] = pathauto_node_collection_item_pattern
 features[variable][] = pathauto_taxonomy_term_collection_categories_pattern
 features[variable][] = pathauto_taxonomy_term_collection_type_pattern
 features[variable][] = save_continue_collection_item
+
+bundle_roles[] = developer
+bundle_roles[] = administrator
+bundle_roles[] = site_owner
+bundle_roles[] = configuration_manager
+
 features[variable][] = webform_node_collection_item
 project status url = https://github.com/CuBoulder/express_collections_bundle
 project_demo_url = http://www.colorado.edu/webcentral/node/1530
